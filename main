@@ -1,0 +1,27 @@
+public class SumOddRange {
+//This program sums up the odd numbers in a given range
+
+    public static boolean isOdd (int number) {
+/*boolean method returns false if number is odd AND less than 0*/
+        return number > 0 && number % 2 != 0;
+    } 
+    
+    
+    public static int sumOdd (int start, int end) {
+/*calc the sum of odd nums within the range of start & end*/
+
+        if (start < 0 || end < 0 || end < start) {
+            return -1;
+        } 
+        
+        int sum = 0;
+        
+        for (int i = start; i <= end ; i ++) {
+            if (isOdd(i)) {
+                sum += i;
+            } 
+        } return sum;
+        
+    }
+    
+}
